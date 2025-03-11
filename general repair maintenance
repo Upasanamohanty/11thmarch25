@@ -1,0 +1,20 @@
+import React from 'react';
+
+const GeneralRepairMaintenance = () => {
+  return (
+    <div
+      className="flex items-center bg-black border border-gray-300 shadow-lg rounded-xl"
+      style={{ width: 646, height: 286, borderRadius: 10, borderWidth: 1 }}
+    >
+      <div className="w-full">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="General Repair & Maintenance"
+          className="rounded-xl w-full"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default GeneralRepairMaintenance;
