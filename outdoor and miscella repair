@@ -1,0 +1,37 @@
+import React from 'react';
+import { FaWrench, FaCouch, FaLightbulb, FaTree, FaWater } from 'react-icons/fa';
+
+const RepairServices = () => {
+  const services = [
+    { icon: <FaWrench />, text: 'Installing or repairing gates and fences' },
+    { icon: <FaCouch />, text: 'Assembling outdoor furniture' },
+    { icon: <FaLightbulb />, text: 'Fixing or replacing outdoor lighting' },
+    { icon: <FaTree />, text: 'Minor landscaping and garden maintenance' },
+    { icon: <FaWater />, text: 'Cleaning and repairing gutters' },
+  ];
+
+  return (
+    <div className="flex items-center bg-white shadow-lg rounded-2xl p-6 max-w-3xl">
+      <div className="w-1/3 pr-4">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Repair Services"
+          className="rounded-xl w-full"
+        />
+      </div>
+      <div className="w-2/3">
+        <h2 className="text-xl font-bold mb-4">Outdoor & Miscellaneous Repairs</h2>
+        <ul className="space-y-2">
+          {services.map((service, index) => (
+            <li key={index} className="flex items-center gap-2">
+              <span className="text-orange-500 text-xl">{service.icon}</span>
+              <span>{service.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default RepairServices;
